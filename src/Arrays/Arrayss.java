@@ -50,6 +50,18 @@ public void Traversal(int []a){
     return -1;
 
     }
+    //a{1,2,3,4,5,6,7,8}  s=7 ,f=6, l=7
+    public int binarySearch(int[]a, int svalue,int findex, int lindex) {
+        while (findex <= lindex) {
+            int mid = (findex + lindex) / 2; //6
+            if (svalue == a[mid])
+                return mid;
+            if (svalue > a[mid])
+                findex = mid + 1;
+            if (svalue < a[mid])
+                lindex = mid - 1;
+        }
+        return -1;
 
-
+    }
 }

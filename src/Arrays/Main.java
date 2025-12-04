@@ -7,22 +7,19 @@ public class Main {
         Scanner scanner=new Scanner(System.in);
         Arrayss arr=new Arrayss();
       // int []numbers=new int[5];
-        int []numbers={1,2,3,4,5,6};
+        int []numbers={1,2,3,4,5,6,7,8,9};
         //arr.Shift_Left_Delete(numbers,3);
 
-      //  arr.Traversal(numbers);
-      int result=  arr.LinearSearch(numbers,9);
+        //  arr.Traversal(numbers);
+        //int result=  arr.LinearSearch(numbers,9);
+        int result=  arr.binarySearch(numbers,9,0,numbers.length-1);
 
 
 
-      if(result!=-1)
-        System.out.println("Value found at index : "+result);
-      else
-          System.out.println("Value not found!!");
-
-
-
-
+        if(result!=-1)
+            System.out.println("Value found at index : "+result);
+        else
+            System.out.println("Value not found!!");
 
 
 
