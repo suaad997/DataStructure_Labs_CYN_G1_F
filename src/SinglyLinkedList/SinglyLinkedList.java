@@ -13,7 +13,6 @@ public boolean isEmpty(){
     return size()==0;
 
 }
-
 public void addFirst(E data){
     Node<E> newNode=new Node(data,head);
 
@@ -75,6 +74,32 @@ public void display(){
     }
     System.out.println(" null\n");
 }
+public void addAtPosition(E data,int position){
+    if(position<1 || position>size+1){
+        System.out.println("Invaild position");
+        return;
+    }
+    if (position==1){
+        addFirst(data);
+        return;
+    }
+    else {
+        Node<E> newNode=new Node(data,null);
+        Node<E> temp=head;
+        int count=1;
+        while (count<position-1){
+            temp=temp.getNext();
+        }
+        newNode.setNext(temp.getNext());
+        temp.setNext(newNode);
+        if (newNode.getNext()==null){
+            tail=newNode;
+        }
+       size++;
+    }
+}
+
+
 
 
 
